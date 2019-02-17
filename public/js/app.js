@@ -1777,8 +1777,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -19429,9 +19427,7 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
+              _vm._v("I'm an example component.")
             ])
           ])
         ])
@@ -31651,7 +31647,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\n\r\nundefined\r\n       ^\r\n      Can't find stylesheet to import.\n  ╷\n9 │ @import '~bootstrap/scss/bootstrap';\n  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  ╵\n  stdin 9:9  root stylesheet\r\n      in C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\resources\\sass\\app.scss (line 9, column 9)\n    at runLoaders (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\webpack\\lib\\NormalModule.js:301:20)\n    at C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at render (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass-loader\\lib\\loader.js:52:13)\n    at Function.$2 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:24680:48)\n    at wg.$2 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:15592:16)\n    at ud.vE (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:9070:42)\n    at ud.vD (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:9072:32)\n    at ip.uO (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8378:46)\n    at tL.$0 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8523:7)\n    at Object.eF (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:1532:80)\n    at ah.bf (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8441:3)\n    at iD.bf (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8371:25)\n    at iD.cK (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8358:6)\n    at pe.cK (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8148:35)\n    at Object.m (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:1405:19)\n    at C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:5113:51\n    at wG.a (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:1416:71)\n    at wG.$2 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8163:23)\n    at vg.$2 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8158:25)\n    at ud.vE (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:9070:42)\n    at ud.vD (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:9072:32)\n    at ip.uO (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8378:46)\n    at tL.$0 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8523:7)\n    at Object.eF (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:1532:80)\n    at ah.bf (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8441:3)\n    at iD.bf (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8371:25)\n    at iD.cK (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8358:6)\n    at Object.eval (eval at C0 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:651:15), <anonymous>:3:37)\n    at ud.vE (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:9070:42)\n    at ud.vD (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:9072:32)\n    at ip.uO (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8378:46)\n    at tL.$0 (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8523:7)\n    at Object.eF (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:1532:80)\n    at ah.bf (C:\\Users\\Andy\\Projects\\laravel\\vue-meetup\\node_modules\\sass\\sass.dart.js:8441:3)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
