@@ -20,7 +20,7 @@ window.Vue = require('vue')
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('nav-bar', require('./components/NavBar').default)
-Vue.component('post-view', require('./components/PostView').default)
+Vue.component('posts-view', require('./components/PostsView').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
