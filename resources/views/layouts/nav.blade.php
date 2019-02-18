@@ -1,17 +1,17 @@
-<section class="section is-marginless is-paddingless">
-    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+<nav-bar inline-template>
+    <nav class="navbar has-shadow">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                <a @click="toggleBurger" class="navbar-burger burger" :class="{ 'is-active': showBurger }">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </a>
             </div>
-            <div class="navbar-menu">
+            <div class="navbar-menu" :class="{ 'is-active': showBurger }">
                 <div class="navbar-start">
                     <a class="navbar-item">
                         Home
@@ -28,13 +28,13 @@
                         </div>
                     </div>
                     @else
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div @click="toggleDropDown" class="navbar-item has-dropdown" :class="{'is-active':showDropDown}">
                         <a class="navbar-link">
                             {{ Auth::user()->name }}
                         </a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
+                                                document.getElementById('logout-form').submit();">
                                 Log out
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -47,4 +47,4 @@
             </div>
         </div>
     </nav>
-</section>
+</nav-bar>
