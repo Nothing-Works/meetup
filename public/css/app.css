@@ -9136,3 +9136,14 @@ label.panel-block:hover {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
 }
+
+.navbar-item.has-dropdown .navbar-dropdown {
+  display: none;
+}
+.navbar-item.has-dropdown.is-active .navbar-dropdown {
+  display: block;
+}
+
+[v-cloak] {
+  display: none;
+}
