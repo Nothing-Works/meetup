@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         ViewFactory::macro('component', function ($name, $data = []) {
-            return View::make('layouts.app', ['name' => $name, 'data' => $data]);
+            return View::make('app', ['name' => $name, 'data' => $data]);
         });
     }
 }
