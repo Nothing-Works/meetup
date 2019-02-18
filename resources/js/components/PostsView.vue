@@ -3,9 +3,10 @@
         <div class="columns">
             <div class="column is-8">
                 <post-view
-                    v-for="item in items"
+                    v-for="(item, index) in items"
                     :key="item.id"
                     :post="item"
+                    @remove="remove(index)"
                 ></post-view>
             </div>
 
@@ -40,6 +41,11 @@ export default {
     computed: {
         total() {
             return this.posts.length
+        }
+    },
+    methods: {
+        remove(index) {
+            this.posts.splice(index, 1)
         }
     }
 }

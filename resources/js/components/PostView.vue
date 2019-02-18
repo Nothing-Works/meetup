@@ -7,6 +7,11 @@
             <div class="card-content">
                 <div class="content">{{ item.body }}</div>
             </div>
+            <footer class="card-footer">
+                <a class="card-footer-item button is-danger" @click="remove"
+                    >Delete</a
+                >
+            </footer>
         </div>
         <hr />
     </div>
@@ -25,6 +30,11 @@ export default {
     data() {
         return {
             item: this.post
+        }
+    },
+    methods: {
+        remove() {
+            this.$emit('remove')
         }
     }
 }

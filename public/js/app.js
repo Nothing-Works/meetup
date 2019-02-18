@@ -1866,6 +1866,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     post: {
@@ -1879,6 +1884,11 @@ __webpack_require__.r(__webpack_exports__);
     return {
       item: this.post
     };
+  },
+  methods: {
+    remove: function remove() {
+      this.$emit('remove');
+    }
   }
 });
 
@@ -1895,6 +1905,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PostView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PostView */ "./resources/js/components/PostView.vue");
 /* harmony import */ var _MetaData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MetaData */ "./resources/js/components/MetaData.vue");
+//
 //
 //
 //
@@ -1936,6 +1947,11 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     total: function total() {
       return this.posts.length;
+    }
+  },
+  methods: {
+    remove: function remove(index) {
+      this.posts.splice(index, 1);
     }
   }
 });
@@ -19649,6 +19665,17 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "card-content" }, [
         _c("div", { staticClass: "content" }, [_vm._v(_vm._s(_vm.item.body))])
+      ]),
+      _vm._v(" "),
+      _c("footer", { staticClass: "card-footer" }, [
+        _c(
+          "a",
+          {
+            staticClass: "card-footer-item button is-danger",
+            on: { click: _vm.remove }
+          },
+          [_vm._v("Delete")]
+        )
       ])
     ]),
     _vm._v(" "),
@@ -19682,8 +19709,16 @@ var render = function() {
       _c(
         "div",
         { staticClass: "column is-8" },
-        _vm._l(_vm.items, function(item) {
-          return _c("post-view", { key: item.id, attrs: { post: item } })
+        _vm._l(_vm.items, function(item, index) {
+          return _c("post-view", {
+            key: item.id,
+            attrs: { post: item },
+            on: {
+              remove: function($event) {
+                return _vm.remove(index)
+              }
+            }
+          })
         }),
         1
       ),
@@ -32078,7 +32113,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************************************************!*\
   !*** ./resources/js/components/PostsView.vue?vue&type=template&id=56f7673d& ***!
   \******************************************************************************/
-/*! exports provided: render, staticRenderFns */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

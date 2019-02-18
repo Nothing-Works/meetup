@@ -13,8 +13,8 @@
             </div>
             <div class="navbar-menu" :class="{ 'is-active': showBurger }">
                 <div class="navbar-start">
-                    <a class="navbar-item">
-                        Home
+                    <a href="/posts" class="navbar-item">
+                        Posts
                     </a>
                 </div>
                 <div class="navbar-end">
