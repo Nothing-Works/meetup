@@ -14,6 +14,14 @@
 
 <script>
 export default {
+    props: {
+        posts: {
+            type: Array,
+            default() {
+                return []
+            }
+        }
+    },
     mounted() {
         console.log('Component mounted.')
     }
