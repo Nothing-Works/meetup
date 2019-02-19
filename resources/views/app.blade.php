@@ -13,18 +13,19 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
     <script>
         window.shared = @json($shared)
 
     </script>
 
+    <meta name="turbolinks-cache-control" content="no-cache">
 </head>
 
 <body>
     <div id="app" data-component="{{ $name }}" data-props="{{ json_encode($data) }}"></div>
-
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
 </body>
 
 </html>

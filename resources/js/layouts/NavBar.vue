@@ -60,7 +60,7 @@ export default {
             this.showDropDown = !this.showDropDown
         },
         logout() {
-            axios.post('/logout')
+            axios.post('/logout').then(() => Turbolinks.visit('/'))
         }
     }
 }

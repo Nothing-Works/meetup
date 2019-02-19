@@ -1,11 +1,10 @@
 require('./bootstrap')
-
 import Vue from 'vue'
 import Shared from './mixins/shared'
+
 Vue.mixin(Shared)
 
 const files = require.context('./', true, /\.vue$/i)
-
 files.keys().map(key =>
     Vue.component(
         key
@@ -16,11 +15,17 @@ files.keys().map(key =>
     )
 )
 
-const root = document.getElementById('app')
+document.addEventListener('turbolinks:load', event => {
+    const root = document.getElementById('app')
 
-window.Vue = new Vue({
-    render: h =>
-        h(Vue.component(root.dataset.component), {
-            props: JSON.parse(root.dataset.props)
-        })
-}).$mount(root)
+    if (window.Vue) {
+        window.Vue.$destroy(true)
+    }
+
+    window.Vue = new Vue({
+        render: h =>
+            h(Vue.component(root.dataset.component), {
+                props: JSON.parse(root.dataset.props)
+            })
+    }).$mount(root)
+})

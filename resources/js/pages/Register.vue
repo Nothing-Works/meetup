@@ -15,7 +15,7 @@
 
                                     <div class="control">
                                         <input
-                                            v-model="name"
+                                            v-model="form.name"
                                             type="text"
                                             class="input"
                                         />
@@ -29,7 +29,7 @@
 
                                     <div class="control">
                                         <input
-                                            v-model="email"
+                                            v-model="form.email"
                                             type="email"
                                             class="input"
                                         />
@@ -43,7 +43,7 @@
 
                                     <div class="control">
                                         <input
-                                            v-model="password"
+                                            v-model="form.password"
                                             type="password"
                                             class="input"
                                         />
@@ -57,7 +57,7 @@
 
                                     <div class="control">
                                         <input
-                                            v-model="password_confirmation"
+                                            v-model="form.password_confirmation"
                                             type="password"
                                             class="input"
                                         />
@@ -87,24 +87,19 @@
 export default {
     data() {
         return {
-            name: '',
-            email: '',
-            password: '',
-            password_confirmation: ''
+            form: {
+                name: '',
+                email: '',
+                password: '',
+                password_confirmation: ''
+            }
         }
     },
     methods: {
         submit() {
-            const data = {
-                name: this.name,
-                email: this.email,
-                password: this.password,
-                password_confirmation: this.password_confirmation
-            }
-
             axios
-                .post('/register', data)
-                .then(() => (window.location.href = '/home'))
+                .post('/register', this.form)
+                .then(() => Turbolinks.visit('/home'))
         }
     }
 }
