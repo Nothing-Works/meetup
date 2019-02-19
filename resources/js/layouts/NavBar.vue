@@ -18,7 +18,7 @@
                     <a href="/posts" class="navbar-item">Posts</a>
                 </div>
                 <div class="navbar-end">
-                    <div class="navbar-item">
+                    <div v-if="!shared" class="navbar-item">
                         <div class="buttons">
                             <a class="button is-primary" href>
                                 <strong>Sign up</strong>
@@ -28,25 +28,14 @@
                     </div>
 
                     <div
+                        v-else
                         class="navbar-item has-dropdown"
                         :class="{ 'is-active': showDropDown }"
                         @click="toggleDropDown"
                     >
-                        <a class="navbar-link"></a>
+                        <a class="navbar-link">{{ shared.auth.user.name }}</a>
                         <div class="navbar-dropdown">
-                            <a
-                                class="navbar-item"
-                                href
-                                onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();"
-                                >Log out</a
-                            >
-                            <form
-                                id="logout-form"
-                                action
-                                method="POST"
-                                style="display: none;"
-                            ></form>
+                            <a class="navbar-item" @click="logout">Log out</a>
                         </div>
                     </div>
                 </div>
@@ -69,6 +58,9 @@ export default {
         },
         toggleDropDown() {
             this.showDropDown = !this.showDropDown
+        },
+        logout() {
+            axios.post('/logout')
         }
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\View;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return View::component('Welcome');
 });
 
 Auth::routes();

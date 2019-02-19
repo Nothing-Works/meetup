@@ -21,7 +21,7 @@ class VueDataServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('*', function ($view) {
-            Auth::user() ? $view->with('shared',
+            $view->with('shared', Auth::check() ?
             [
                 'auth' => [
                     'user' => [
@@ -30,9 +30,7 @@ class VueDataServiceProvider extends ServiceProvider
                         'email' => Auth::user()->email,
                     ],
                 ],
-            ]) : $view->with('shared',
-            [
-            ]);
+            ] : null);
         });
     }
 }
