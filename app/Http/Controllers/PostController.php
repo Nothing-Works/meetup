@@ -8,14 +8,6 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     /**
-     * ThreadController constructor.
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
