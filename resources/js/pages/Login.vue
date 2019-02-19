@@ -9,16 +9,16 @@
                         </header>
 
                         <div class="card-content">
-                            <form method="POST">
+                            <form @submit.prevent="submit">
                                 <div class="field">
                                     <label for="email" class="label"
                                         >E-Mail Address</label
                                     >
                                     <div class="control">
                                         <input
+                                            v-model="form.email"
                                             type="email"
                                             class="input"
-                                            name="email"
                                         />
                                     </div>
                                 </div>
@@ -29,9 +29,9 @@
                                     >
                                     <div class="control">
                                         <input
+                                            v-model="form.password"
                                             type="password"
                                             class="input"
-                                            name="password"
                                         />
                                     </div>
                                 </div>
@@ -40,9 +40,8 @@
                                     <div class="control">
                                         <label for="remember" class="checkbox">
                                             <input
-                                                id="remember"
+                                                v-model="form.remember"
                                                 type="checkbox"
-                                                name="remember"
                                             />
                                             Remember Me
                                         </label>
@@ -74,5 +73,22 @@
 </template>
 
 <script>
-export default {}
+export default {
+    data() {
+        return {
+            form: {
+                email: '',
+                password: '',
+                remember: ''
+            }
+        }
+    },
+    methods: {
+        submit() {
+            axios
+                .post('/login', this.form)
+                .then(() => Turbolinks.visit('/home'))
+        }
+    }
+}
 </script>

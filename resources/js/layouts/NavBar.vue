@@ -2,7 +2,7 @@
     <nav class="navbar has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item"></a>
+                <a href="/" class="navbar-item">Vue Meetup</a>
                 <a
                     class="navbar-burger burger"
                     :class="{ 'is-active': showBurger }"

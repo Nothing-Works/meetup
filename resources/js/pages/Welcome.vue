@@ -2,7 +2,7 @@
     <layout>
         <div class="container">
             <div class="content is-large has-text-centered">
-                <h1>Laravel</h1>
+                <h1>Vue Meetup</h1>
                 <a href="https://laravel.com/docs">Docs</a>
                 <a href="https://laracasts.com">Laracasts</a>
                 <a href="https://laravel-news.com">News</a>

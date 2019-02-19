@@ -15,14 +15,14 @@ files.keys().map(key =>
     )
 )
 
-document.addEventListener('turbolinks:load', event => {
+document.addEventListener('turbolinks:load', () => {
     const root = document.getElementById('app')
 
-    if (window.Vue) {
-        window.Vue.$destroy(true)
+    if (window.vue) {
+        window.vue.$destroy(true)
     }
 
-    window.Vue = new Vue({
+    window.vue = new Vue({
         render: h =>
             h(Vue.component(root.dataset.component), {
                 props: JSON.parse(root.dataset.props)

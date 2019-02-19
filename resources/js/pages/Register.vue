@@ -9,7 +9,7 @@
                         </header>
 
                         <div class="card-content">
-                            <form method="POST" @submit.prevent="submit">
+                            <form @submit.prevent="submit">
                                 <div class="field">
                                     <label for="name" class="label">Name</label>
 

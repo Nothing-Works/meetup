@@ -1974,8 +1974,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: {
+        email: '',
+        password: '',
+        remember: ''
+      }
+    };
+  },
+  methods: {
+    submit: function submit() {
+      axios.post('/login', this.form).then(function () {
+        return Turbolinks.visit('/home');
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -19844,7 +19860,9 @@ var render = function() {
   return _c("nav", { staticClass: "navbar has-shadow" }, [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "navbar-brand" }, [
-        _c("a", { staticClass: "navbar-item" }),
+        _c("a", { staticClass: "navbar-item", attrs: { href: "/" } }, [
+          _vm._v("Vue Meetup")
+        ]),
         _vm._v(" "),
         _c(
           "a",
@@ -19999,81 +20017,165 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-content" }, [
-              _c("form", { attrs: { method: "POST" } }, [
-                _c("div", { staticClass: "field" }, [
-                  _c(
-                    "label",
-                    { staticClass: "label", attrs: { for: "email" } },
-                    [_vm._v("E-Mail Address")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "control" }, [
-                    _c("input", {
-                      staticClass: "input",
-                      attrs: { type: "email", name: "email" }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "field" }, [
-                  _c(
-                    "label",
-                    { staticClass: "label", attrs: { for: "password" } },
-                    [_vm._v("Password")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "control" }, [
-                    _c("input", {
-                      staticClass: "input",
-                      attrs: { type: "password", name: "password" }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "field" }, [
-                  _c("div", { staticClass: "control" }, [
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.submit($event)
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "field" }, [
                     _c(
                       "label",
-                      { staticClass: "checkbox", attrs: { for: "remember" } },
-                      [
-                        _c("input", {
-                          attrs: {
-                            id: "remember",
-                            type: "checkbox",
-                            name: "remember"
+                      { staticClass: "label", attrs: { for: "email" } },
+                      [_vm._v("E-Mail Address")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "control" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.email,
+                            expression: "form.email"
                           }
-                        }),
-                        _vm._v(
-                          "\n                                        Remember Me\n                                    "
-                        )
-                      ]
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "field is-grouped" }, [
-                  _c("div", { staticClass: "control" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "button is-primary",
-                        attrs: { type: "submit" }
-                      },
-                      [
-                        _vm._v(
-                          "\n                                        Login\n                                    "
-                        )
-                      ]
-                    )
+                        ],
+                        staticClass: "input",
+                        attrs: { type: "email" },
+                        domProps: { value: _vm.form.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "email", $event.target.value)
+                          }
+                        }
+                      })
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "control" }, [
-                    _c("a", { staticClass: "button is-text" }, [
-                      _vm._v("Forgot Your Password?")
+                  _c("div", { staticClass: "field" }, [
+                    _c(
+                      "label",
+                      { staticClass: "label", attrs: { for: "password" } },
+                      [_vm._v("Password")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "control" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.password,
+                            expression: "form.password"
+                          }
+                        ],
+                        staticClass: "input",
+                        attrs: { type: "password" },
+                        domProps: { value: _vm.form.password },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "password", $event.target.value)
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "field" }, [
+                    _c("div", { staticClass: "control" }, [
+                      _c(
+                        "label",
+                        { staticClass: "checkbox", attrs: { for: "remember" } },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.remember,
+                                expression: "form.remember"
+                              }
+                            ],
+                            attrs: { type: "checkbox" },
+                            domProps: {
+                              checked: Array.isArray(_vm.form.remember)
+                                ? _vm._i(_vm.form.remember, null) > -1
+                                : _vm.form.remember
+                            },
+                            on: {
+                              change: function($event) {
+                                var $$a = _vm.form.remember,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = null,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 &&
+                                      _vm.$set(
+                                        _vm.form,
+                                        "remember",
+                                        $$a.concat([$$v])
+                                      )
+                                  } else {
+                                    $$i > -1 &&
+                                      _vm.$set(
+                                        _vm.form,
+                                        "remember",
+                                        $$a
+                                          .slice(0, $$i)
+                                          .concat($$a.slice($$i + 1))
+                                      )
+                                  }
+                                } else {
+                                  _vm.$set(_vm.form, "remember", $$c)
+                                }
+                              }
+                            }
+                          }),
+                          _vm._v(
+                            "\n                                        Remember Me\n                                    "
+                          )
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "field is-grouped" }, [
+                    _c("div", { staticClass: "control" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "button is-primary",
+                          attrs: { type: "submit" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                        Login\n                                    "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "control" }, [
+                      _c("a", { staticClass: "button is-text" }, [
+                        _vm._v("Forgot Your Password?")
+                      ])
                     ])
                   ])
-                ])
-              ])
+                ]
+              )
             ])
           ])
         ])
@@ -20158,7 +20260,6 @@ var render = function() {
               _c(
                 "form",
                 {
-                  attrs: { method: "POST" },
                   on: {
                     submit: function($event) {
                       $event.preventDefault()
@@ -20352,7 +20453,7 @@ var render = function() {
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "content is-large has-text-centered" }, [
-        _c("h1", [_vm._v("Laravel")]),
+        _c("h1", [_vm._v("Vue Meetup")]),
         _vm._v(" "),
         _c("a", { attrs: { href: "https://laravel.com/docs" } }, [
           _vm._v("Docs")
@@ -32501,14 +32602,14 @@ var files = __webpack_require__("./resources/js sync recursive \\.vue$/");
 files.keys().map(function (key) {
   return vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(key.split('/').pop().split('.')[0], files(key).default);
 });
-document.addEventListener('turbolinks:load', function (event) {
+document.addEventListener('turbolinks:load', function () {
   var root = document.getElementById('app');
 
-  if (window.Vue) {
-    window.Vue.$destroy(true);
+  if (window.vue) {
+    window.vue.$destroy(true);
   }
 
-  window.Vue = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+  window.vue = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     render: function render(h) {
       return h(vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(root.dataset.component), {
         props: JSON.parse(root.dataset.props)
