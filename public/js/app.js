@@ -19593,7 +19593,7 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "card-content" }, [
       _c("div", { staticClass: "content" }, [
-        _vm._v("\n            Something to show\n            "),
+        _vm._v("\n            Something to show ...\n            "),
         _c("hr"),
         _vm._v(" "),
         _c("div", { staticClass: "field has-addons" }, [

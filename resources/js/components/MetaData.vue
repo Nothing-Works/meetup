@@ -5,7 +5,7 @@
         </header>
         <div class="card-content">
             <div class="content">
-                Something to show
+                Something to show ...
                 <hr />
                 <div class="field has-addons">
                     <div class="control">
