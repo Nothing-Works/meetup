@@ -20,10 +20,10 @@
                 <div class="navbar-end">
                     <div v-if="!shared" class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary" href>
+                            <a class="button is-primary" href="/register">
                                 <strong>Sign up</strong>
                             </a>
-                            <a class="button is-light" href>Log in</a>
+                            <a class="button is-light" href="login">Log in</a>
                         </div>
                     </div>
 

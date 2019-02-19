@@ -102,7 +102,9 @@ export default {
                 password_confirmation: this.password_confirmation
             }
 
-            axios.post('/register', data)
+            axios
+                .post('/register', data)
+                .then(() => (window.location.href = '/home'))
         }
     }
 }

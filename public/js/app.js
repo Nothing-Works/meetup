@@ -2126,7 +2126,9 @@ __webpack_require__.r(__webpack_exports__);
         password: this.password,
         password_confirmation: this.password_confirmation
       };
-      axios.post('/register', data);
+      axios.post('/register', data).then(function () {
+        return window.location.href = '/home';
+      });
     }
   }
 });
@@ -19892,11 +19894,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "buttons" }, [
-      _c("a", { staticClass: "button is-primary", attrs: { href: "" } }, [
-        _c("strong", [_vm._v("Sign up")])
-      ]),
+      _c(
+        "a",
+        { staticClass: "button is-primary", attrs: { href: "/register" } },
+        [_c("strong", [_vm._v("Sign up")])]
+      ),
       _vm._v(" "),
-      _c("a", { staticClass: "button is-light", attrs: { href: "" } }, [
+      _c("a", { staticClass: "button is-light", attrs: { href: "login" } }, [
         _vm._v("Log in")
       ])
     ])

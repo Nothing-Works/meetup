@@ -80,4 +80,17 @@ class RegisterController extends Controller
     {
         return View::component('Register');
     }
+
+    /**
+     * The user has been registered.
+     *
+     * @param mixed $request
+     * @param mixed $user
+     *
+     * @return mixed
+     */
+    protected function registered($request, $user)
+    {
+        return 'done';
+    }
 }
