@@ -1772,7 +1772,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('mounted');
+  }
+});
 
 /***/ }),
 
@@ -1848,9 +1852,6 @@ __webpack_require__.r(__webpack_exports__);
       showBurger: false,
       showDropDown: false
     };
-  },
-  mounted: function mounted() {
-    console.log('Component mounted.');
   },
   methods: {
     toggleBurger: function toggleBurger() {
@@ -31791,9 +31792,12 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixins_shared__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mixins/shared */ "./resources/js/mixins/shared.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.mixin(_mixins_shared__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 var files = __webpack_require__("./resources/js sync recursive \\.vue$/");
 
@@ -31991,6 +31995,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavBar_vue_vue_type_template_id_f7d73558___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/mixins/shared.js":
+/*!***************************************!*\
+  !*** ./resources/js/mixins/shared.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      shared: window.shared
+    };
+  }
+});
 
 /***/ }),
 

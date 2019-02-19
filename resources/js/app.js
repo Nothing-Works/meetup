@@ -1,6 +1,8 @@
 require('./bootstrap')
 
 import Vue from 'vue'
+import Shared from './mixins/shared'
+Vue.mixin(Shared)
 
 const files = require.context('./', true, /\.vue$/i)
 

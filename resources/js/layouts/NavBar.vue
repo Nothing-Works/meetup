@@ -63,9 +63,6 @@ export default {
             showDropDown: false
         }
     },
-    mounted() {
-        console.log('Component mounted.')
-    },
     methods: {
         toggleBurger() {
             this.showBurger = !this.showBurger
