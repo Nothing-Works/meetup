@@ -23,7 +23,7 @@
                             <a class="button is-primary" href="/register">
                                 <strong>Sign up</strong>
                             </a>
-                            <a class="button is-light" href="login">Log in</a>
+                            <a class="button is-light" href="/login">Log in</a>
                         </div>
                     </div>
 
@@ -60,7 +60,7 @@ export default {
             this.showDropDown = !this.showDropDown
         },
         logout() {
-            axios.post('/logout').then(() => Turbolinks.visit('/'))
+            axios.post('/logout').then(() => (window.location.href = '/'))
         }
     }
 }

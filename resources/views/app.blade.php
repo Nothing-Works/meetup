@@ -21,7 +21,6 @@
 
     </script>
 
-    <meta name="turbolinks-cache-control" content="no-cache">
 </head>
 
 <body>
