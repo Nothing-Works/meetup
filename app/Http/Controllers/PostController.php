@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\View;
 class PostController extends Controller
 {
     /**
+     * ThreadController constructor.
+     */
+    public function __construct()
+    {
+        // $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -49,6 +57,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        dd(auth()->user()->can('delete', $post));
     }
 
     /**
