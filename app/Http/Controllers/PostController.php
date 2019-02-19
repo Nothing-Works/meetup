@@ -13,7 +13,7 @@ class PostController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -23,9 +23,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $items = Post::all();
 
-        return View::component('PostsView', compact('posts'));
+        return View::component('PostsView', compact('items'));
     }
 
     /**
