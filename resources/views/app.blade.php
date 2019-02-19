@@ -13,11 +13,18 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script>
+        window.shared = @json($shared)
+
+    </script>
+
 </head>
 
 <body>
     <div id="app" data-component="{{ $name }}" data-props="{{ json_encode($data) }}"></div>
+
     <script src="{{ asset('js/app.js') }}" defer></script>
+
 </body>
 
 </html>
