@@ -20143,7 +20143,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "columns is-mobile is-centered" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
         _c("div", { staticClass: "column is-half" }, [
           _c("div", { staticClass: "card" }, [
             _c("header", { staticClass: "card-header" }, [
@@ -20245,7 +20245,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "columns is-mobile is-centered" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
         _c("div", { staticClass: "column is-half" }, [
           _c("div", { staticClass: "card" }, [
             _c("header", { staticClass: "card-header" }, [
@@ -20443,7 +20443,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "columns is-mobile is-centered" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
         _c("div", { staticClass: "column is-half" }, [
           _c("div", { staticClass: "card" }, [
             _c("header", { staticClass: "card-header" }, [
