@@ -14,13 +14,11 @@
                 <div class="card-content">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
                         <div class="field">
                             <label for="name" class="label">Name</label>
-
                             <div class="control">
                                 <input id="name" type="text" class="input{{ $errors->has('name') ? ' is-danger' : '' }}"
-                                    name="name" value="{{ old('name') }}" required autofocus>
+                                    name="name" value="{{ old('name') }}" required>
 
                                 @if ($errors->has('name'))
                                 <p class="help is-danger" role="alert">

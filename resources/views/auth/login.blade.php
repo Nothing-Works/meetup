@@ -10,7 +10,6 @@
                         Log in
                     </p>
                 </header>
-
                 <div class="card-content">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -18,14 +17,12 @@
                             <label for="email" class="label">E-Mail Address</label>
                             <div class="control">
                                 <input id="email" type="email" class="input{{ $errors->has('email') ? ' is-danger' : '' }}"
-                                    name="email" value="{{ old('email') }}" required autofocus>
-
+                                    name="email" value="{{ old('email') }}" required>
                                 @if ($errors->has('email'))
                                 <p class="help is-danger" role="alert">{{ $errors->first('email') }}</p>
                                 @endif
                             </div>
                         </div>
-
                         <div class="field">
                             <label for="password" class="label">Password</label>
                             <div class="control">
@@ -37,7 +34,6 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="field">
                             <div class="control">
                                 <label for="remember" class="checkbox">
