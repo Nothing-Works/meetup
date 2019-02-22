@@ -7,7 +7,12 @@
 
             <div class="card-content">
                 <div v-if="!editing" class="content">{{ item.body }}</div>
-                <input v-else v-model="item.body" class="input" type="text" />
+                <textarea
+                    v-else
+                    v-model="item.body"
+                    class="textarea"
+                    type="text"
+                ></textarea>
             </div>
 
             <footer class="card-footer">

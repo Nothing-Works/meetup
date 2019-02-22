@@ -1894,6 +1894,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     post: {
@@ -19703,7 +19708,7 @@ var render = function() {
           ? _c("div", { staticClass: "content" }, [
               _vm._v(_vm._s(_vm.item.body))
             ])
-          : _c("input", {
+          : _c("textarea", {
               directives: [
                 {
                   name: "model",
@@ -19712,7 +19717,7 @@ var render = function() {
                   expression: "item.body"
                 }
               ],
-              staticClass: "input",
+              staticClass: "textarea",
               attrs: { type: "text" },
               domProps: { value: _vm.item.body },
               on: {
