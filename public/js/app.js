@@ -1852,6 +1852,29 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1882,12 +1905,24 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      item: this.post
+      item: _objectSpread({}, this.post),
+      editing: false
     };
   },
   methods: {
     remove: function remove() {
       this.$emit('remove');
+    },
+    edit: function edit() {
+      this.editing = true;
+    },
+    cancel: function cancel() {
+      this.item.body = this.post.body;
+      this.editing = false;
+    },
+    save: function save() {
+      this.item.body = this.item.body;
+      this.editing = false;
     }
   }
 });
@@ -19664,18 +19699,81 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "card-content" }, [
-        _c("div", { staticClass: "content" }, [_vm._v(_vm._s(_vm.item.body))])
+        !_vm.editing
+          ? _c("div", { staticClass: "content" }, [
+              _vm._v(_vm._s(_vm.item.body))
+            ])
+          : _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.item.body,
+                  expression: "item.body"
+                }
+              ],
+              staticClass: "input",
+              attrs: { type: "text" },
+              domProps: { value: _vm.item.body },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.item, "body", $event.target.value)
+                }
+              }
+            })
       ]),
       _vm._v(" "),
       _c("footer", { staticClass: "card-footer" }, [
-        _c(
-          "a",
-          {
-            staticClass: "card-footer-item button is-danger",
-            on: { click: _vm.remove }
-          },
-          [_vm._v("Delete")]
-        )
+        _c("div", { staticClass: "card-footer-item" }, [
+          _c(
+            "a",
+            { staticClass: "button is-danger", on: { click: _vm.remove } },
+            [_vm._v("Delete")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-footer-item level" }, [
+          !_vm.editing
+            ? _c("div", { staticClass: "level-item" }, [
+                _c(
+                  "a",
+                  { staticClass: "button is-primary", on: { click: _vm.edit } },
+                  [_vm._v("Edit")]
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.editing
+            ? _c("div", { staticClass: "level-left" }, [
+                _c(
+                  "p",
+                  { staticClass: "level-item", on: { click: _vm.save } },
+                  [
+                    _c("a", { staticClass: "button is-success" }, [
+                      _vm._v("Save")
+                    ])
+                  ]
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.editing
+            ? _c("div", { staticClass: "level-right" }, [
+                _c(
+                  "p",
+                  { staticClass: "level-item", on: { click: _vm.cancel } },
+                  [
+                    _c("a", { staticClass: "button is-light" }, [
+                      _vm._v("Cancel")
+                    ])
+                  ]
+                )
+              ])
+            : _vm._e()
+        ])
       ])
     ]),
     _vm._v(" "),

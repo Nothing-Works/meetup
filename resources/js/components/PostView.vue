@@ -4,13 +4,32 @@
             <header class="card-header">
                 <p class="card-header-title">{{ item.title }}</p>
             </header>
+
             <div class="card-content">
-                <div class="content">{{ item.body }}</div>
+                <div v-if="!editing" class="content">{{ item.body }}</div>
+                <input v-else v-model="item.body" class="input" type="text" />
             </div>
+
             <footer class="card-footer">
-                <a class="card-footer-item button is-danger" @click="remove"
-                    >Delete</a
-                >
+                <div class="card-footer-item">
+                    <a class="button is-danger" @click="remove">Delete</a>
+                </div>
+
+                <div class="card-footer-item level">
+                    <div v-if="!editing" class="level-item">
+                        <a class="button is-primary" @click="edit">Edit</a>
+                    </div>
+                    <div v-if="editing" class="level-left">
+                        <p class="level-item" @click="save">
+                            <a class="button is-success">Save</a>
+                        </p>
+                    </div>
+                    <div v-if="editing" class="level-right">
+                        <p class="level-item" @click="cancel">
+                            <a class="button is-light">Cancel</a>
+                        </p>
+                    </div>
+                </div>
             </footer>
         </div>
         <hr />
@@ -29,12 +48,24 @@ export default {
     },
     data() {
         return {
-            item: this.post
+            item: { ...this.post },
+            editing: false
         }
     },
     methods: {
         remove() {
             this.$emit('remove')
+        },
+        edit() {
+            this.editing = true
+        },
+        cancel() {
+            this.item.body = this.post.body
+            this.editing = false
+        },
+        save() {
+            this.item.body = this.item.body
+            this.editing = false
         }
     }
 }
