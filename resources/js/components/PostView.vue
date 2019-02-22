@@ -3,6 +3,12 @@
         <div class="card">
             <header class="card-header">
                 <p class="card-header-title">{{ item.title }}</p>
+
+                <p class="card-header-icon" @click="favorite">
+                    <span class="icon">
+                        <i :class="[favorited ? 'fas' : 'far', 'fa-heart']"></i>
+                    </span>
+                </p>
             </header>
 
             <div class="card-content">
@@ -54,9 +60,11 @@ export default {
     data() {
         return {
             item: { ...this.post },
-            editing: false
+            editing: false,
+            favorited: false
         }
     },
+
     methods: {
         remove() {
             this.$emit('remove')
@@ -71,6 +79,9 @@ export default {
         save() {
             this.item.body = this.item.body
             this.editing = false
+        },
+        favorite() {
+            this.favorited = !this.favorited
         }
     }
 }
