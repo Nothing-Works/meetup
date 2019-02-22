@@ -17,6 +17,7 @@
                                     <div class="control">
                                         <input
                                             v-model="form.email"
+                                            name="email"
                                             type="email"
                                             class="input"
                                         />
@@ -31,6 +32,7 @@
                                         <input
                                             v-model="form.password"
                                             type="password"
+                                            name="password"
                                             class="input"
                                         />
                                     </div>

@@ -16,6 +16,7 @@
                                     <div class="control">
                                         <input
                                             v-model="form.name"
+                                            name="name"
                                             type="text"
                                             class="input"
                                         />
@@ -30,6 +31,7 @@
                                     <div class="control">
                                         <input
                                             v-model="form.email"
+                                            name="email"
                                             type="email"
                                             class="input"
                                         />
@@ -44,6 +46,7 @@
                                     <div class="control">
                                         <input
                                             v-model="form.password"
+                                            name="password"
                                             type="password"
                                             class="input"
                                         />
@@ -59,6 +62,7 @@
                                         <input
                                             v-model="form.password_confirmation"
                                             type="password"
+                                            name="password_confirmation"
                                             class="input"
                                         />
                                     </div>

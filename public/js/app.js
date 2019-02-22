@@ -2107,6 +2107,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2137,6 +2139,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -20377,7 +20383,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "input",
-                        attrs: { type: "email" },
+                        attrs: { name: "email", type: "email" },
                         domProps: { value: _vm.form.email },
                         on: {
                           input: function($event) {
@@ -20409,7 +20415,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "input",
-                        attrs: { type: "password" },
+                        attrs: { type: "password", name: "password" },
                         domProps: { value: _vm.form.password },
                         on: {
                           input: function($event) {
@@ -20577,7 +20583,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "input",
-                        attrs: { type: "text" },
+                        attrs: { name: "name", type: "text" },
                         domProps: { value: _vm.form.name },
                         on: {
                           input: function($event) {
@@ -20609,7 +20615,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "input",
-                        attrs: { type: "email" },
+                        attrs: { name: "email", type: "email" },
                         domProps: { value: _vm.form.email },
                         on: {
                           input: function($event) {
@@ -20641,7 +20647,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "input",
-                        attrs: { type: "password" },
+                        attrs: { name: "password", type: "password" },
                         domProps: { value: _vm.form.password },
                         on: {
                           input: function($event) {
@@ -20676,7 +20682,10 @@ var render = function() {
                           }
                         ],
                         staticClass: "input",
-                        attrs: { type: "password" },
+                        attrs: {
+                          type: "password",
+                          name: "password_confirmation"
+                        },
                         domProps: { value: _vm.form.password_confirmation },
                         on: {
                           input: function($event) {
