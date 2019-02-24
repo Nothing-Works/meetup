@@ -14,6 +14,7 @@
                                     <label for="email" class="label"
                                         >E-Mail Address</label
                                     >
+
                                     <div class="control">
                                         <input
                                             v-model="form.email"
@@ -28,6 +29,7 @@
                                     <label for="password" class="label"
                                         >Password</label
                                     >
+
                                     <div class="control">
                                         <input
                                             v-model="form.password"
@@ -45,6 +47,7 @@
                                                 v-model="form.remember"
                                                 type="checkbox"
                                             />
+
                                             Remember Me
                                         </label>
                                     </div>
@@ -59,6 +62,7 @@
                                             Login
                                         </button>
                                     </div>
+
                                     <div class="control">
                                         <a class="button is-text"
                                             >Forgot Your Password?</a
@@ -80,15 +84,20 @@ export default {
         return {
             form: {
                 email: '',
+
                 password: '',
+
                 remember: ''
             }
         }
     },
+
     methods: {
         submit() {
             axios
+
                 .post('/login', this.form)
+
                 .then(() => (window.location.href = '/home'))
         }
     }
