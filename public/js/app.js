@@ -2016,7 +2016,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     logout: function logout() {
       axios.post('/logout').then(function () {
-        return window.location.href = '/';
+        window.shared = null;
+        Turbolinks.visit('/');
       });
     }
   }
@@ -2124,8 +2125,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      axios.post('/login', this.form).then(function () {
-        return window.location.href = '/home';
+      axios.post('/login', this.form).then(function (_ref) {
+        var data = _ref.data;
+        window.shared = data;
+        Turbolinks.visit('/home');
       });
     }
   }
@@ -2245,7 +2248,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     submit: function submit() {
       axios.post('/register', this.form).then(function () {
-        return window.location.href = '/home';
+        Turbolinks.visit('/home');
       });
     }
   }

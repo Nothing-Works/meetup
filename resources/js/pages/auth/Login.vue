@@ -83,9 +83,7 @@ export default {
         return {
             form: {
                 email: '',
-
                 password: '',
-
                 remember: ''
             }
         }
@@ -93,11 +91,10 @@ export default {
 
     methods: {
         submit() {
-            axios
-
-                .post('/login', this.form)
-
-                .then(() => (window.location.href = '/home'))
+            axios.post('/login', this.form).then(({ data }) => {
+                window.shared = data
+                Turbolinks.visit('/home')
+            })
         }
     }
 }

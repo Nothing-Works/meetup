@@ -21,16 +21,7 @@ class VueDataServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('*', function ($view) {
-            $view->with('shared', Auth::check() ?
-            [
-                'auth' => [
-                    'user' => [
-                        'id' => Auth::user()->id,
-                        'name' => Auth::user()->name,
-                        'email' => Auth::user()->email,
-                    ],
-                ],
-            ] : null);
+            $view->with('shared', Auth::check() ? auth()->user()->userInfo() : null);
         });
     }
 }

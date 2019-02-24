@@ -101,9 +101,9 @@ export default {
     },
     methods: {
         submit() {
-            axios
-                .post('/register', this.form)
-                .then(() => (window.location.href = '/home'))
+            axios.post('/register', this.form).then(() => {
+                Turbolinks.visit('/home')
+            })
         }
     }
 }

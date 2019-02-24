@@ -45,4 +45,17 @@ class LoginController extends Controller
     {
         return View::component('Login');
     }
+
+    /**
+     * The user has been authenticated.
+     *
+     * @param mixed $request
+     * @param mixed $user
+     *
+     * @return mixed
+     */
+    public function authenticated($request, $user)
+    {
+        return $user->userInfo();
+    }
 }

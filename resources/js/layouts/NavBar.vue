@@ -60,7 +60,10 @@ export default {
             this.showDropDown = !this.showDropDown
         },
         logout() {
-            axios.post('/logout').then(() => (window.location.href = '/'))
+            axios.post('/logout').then(() => {
+                window.shared = null
+                Turbolinks.visit('/')
+            })
         }
     }
 }
