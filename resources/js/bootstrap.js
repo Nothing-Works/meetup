@@ -1,5 +1,7 @@
 window._ = require('lodash')
 
+require('turbolinks').start()
+
 window.axios = require('axios')
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'

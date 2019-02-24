@@ -8,6 +8,8 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <meta name="turbolinks-cache-control" content="no-cache">
+
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +20,7 @@
 
     <script>
         window.shared = @json($shared)
+
     </script>
 
 </head>
