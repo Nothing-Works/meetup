@@ -47,7 +47,6 @@
                                                 v-model="form.remember"
                                                 type="checkbox"
                                             />
-
                                             Remember Me
                                         </label>
                                     </div>
