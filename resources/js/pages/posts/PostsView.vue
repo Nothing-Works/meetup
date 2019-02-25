@@ -1,6 +1,11 @@
 <template>
     <layout>
         <div class="container">
+            <div class="field">
+                <div class="control">
+                    <a href="posts/create" class="button is-primary">New</a>
+                </div>
+            </div>
             <div class="columns">
                 <div class="column is-8">
                     <post-view

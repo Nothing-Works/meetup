@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $guarded = [];
     protected $appends = ['can'];
 
     public function getCanAttribute()

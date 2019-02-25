@@ -19,6 +19,7 @@
         "eslint-config-prettier": "^4.0.0",
         "eslint-plugin-prettier": "^3.0.1",
         "eslint-plugin-vue": "^5.2.2",
+        "form-backend-validation": "^2.3.6",
         "laravel-mix": "^4.0.14",
         "lodash": "^4.17.11",
         "prettier": "^1.16.4",

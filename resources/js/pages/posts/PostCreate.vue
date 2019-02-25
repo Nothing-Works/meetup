@@ -5,62 +5,43 @@
                 <div class="column is-half">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Log in</p>
+                            <p class="card-header-title">Create Posts</p>
                         </header>
 
                         <div class="card-content">
                             <form @submit.prevent="submit">
                                 <div class="field">
-                                    <label for="email" class="label"
-                                        >E-Mail Address</label
+                                    <label for="title" class="label"
+                                        >Title</label
                                     >
 
                                     <div class="control">
                                         <input
-                                            v-model="form.email"
-                                            name="email"
-                                            type="email"
+                                            v-model="form.title"
+                                            type="text"
                                             class="input"
                                         />
                                         <p
-                                            v-if="errors.has('email')"
+                                            v-if="errors.has('title')"
                                             class="help is-danger"
                                         >
-                                            {{ errors.first('email') }}
+                                            {{ errors.first('title') }}
                                         </p>
                                     </div>
                                 </div>
-
                                 <div class="field">
-                                    <label for="password" class="label"
-                                        >Password</label
-                                    >
-
                                     <div class="control">
-                                        <input
-                                            v-model="form.password"
-                                            type="password"
-                                            name="password"
-                                            class="input"
-                                        />
+                                        <textarea
+                                            v-model="form.body"
+                                            class="textarea"
+                                            placeholder="What's in your mind?"
+                                        ></textarea>
                                         <p
-                                            v-if="errors.has('password')"
+                                            v-if="errors.has('body')"
                                             class="help is-danger"
                                         >
-                                            {{ errors.first('password') }}
+                                            {{ errors.first('body') }}
                                         </p>
-                                    </div>
-                                </div>
-
-                                <div class="field">
-                                    <div class="control">
-                                        <label for="remember" class="checkbox">
-                                            <input
-                                                v-model="form.remember"
-                                                type="checkbox"
-                                            />
-                                            Remember Me
-                                        </label>
                                     </div>
                                 </div>
 
@@ -70,14 +51,8 @@
                                             type="submit"
                                             class="button is-primary"
                                         >
-                                            Login
+                                            Create
                                         </button>
-                                    </div>
-
-                                    <div class="control">
-                                        <a class="button is-text"
-                                            >Forgot Your Password?</a
-                                        >
                                     </div>
                                 </div>
                             </form>
@@ -96,9 +71,8 @@ export default {
     data() {
         return {
             form: {
-                email: '',
-                password: '',
-                remember: ''
+                title: '',
+                body: ''
             },
             errors: new Errors()
         }
@@ -106,10 +80,8 @@ export default {
     methods: {
         submit() {
             axios
-                .post('/login', this.form)
-                .then(() => {
-                    Turbolinks.visit('/home')
-                })
+                .post('/posts', this.form)
+                .then(() => Turbolinks.visit('/posts'))
                 .catch(error => {
                     this.errors = new Errors(error.response.data.errors)
                 })

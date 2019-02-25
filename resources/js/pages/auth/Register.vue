@@ -20,6 +20,12 @@
                                             type="text"
                                             class="input"
                                         />
+                                        <p
+                                            v-if="errors.has('name')"
+                                            class="help is-danger"
+                                        >
+                                            {{ errors.first('name') }}
+                                        </p>
                                     </div>
                                 </div>
 
@@ -35,6 +41,12 @@
                                             type="email"
                                             class="input"
                                         />
+                                        <p
+                                            v-if="errors.has('email')"
+                                            class="help is-danger"
+                                        >
+                                            {{ errors.first('email') }}
+                                        </p>
                                     </div>
                                 </div>
 
@@ -50,6 +62,12 @@
                                             type="password"
                                             class="input"
                                         />
+                                        <p
+                                            v-if="errors.has('password')"
+                                            class="help is-danger"
+                                        >
+                                            {{ errors.first('password') }}
+                                        </p>
                                     </div>
                                 </div>
 
@@ -88,6 +106,8 @@
 </template>
 
 <script>
+import { Errors } from 'form-backend-validation'
+
 export default {
     data() {
         return {
@@ -96,14 +116,20 @@ export default {
                 email: '',
                 password: '',
                 password_confirmation: ''
-            }
+            },
+            errors: new Errors()
         }
     },
     methods: {
         submit() {
-            axios.post('/register', this.form).then(() => {
-                Turbolinks.visit('/home')
-            })
+            axios
+                .post('/register', this.form)
+                .then(() => {
+                    Turbolinks.visit('/home')
+                })
+                .catch(error => {
+                    this.errors = new Errors(error.response.data.errors)
+                })
         }
     }
 }
