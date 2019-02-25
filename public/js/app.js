@@ -2125,9 +2125,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      axios.post('/login', this.form).then(function (_ref) {
-        var data = _ref.data;
-        window.shared = data;
+      axios.post('/login', this.form).then(function () {
         Turbolinks.visit('/home');
       });
     }

@@ -88,11 +88,9 @@ export default {
             }
         }
     },
-
     methods: {
         submit() {
-            axios.post('/login', this.form).then(({ data }) => {
-                window.shared = data
+            axios.post('/login', this.form).then(() => {
                 Turbolinks.visit('/home')
             })
         }
