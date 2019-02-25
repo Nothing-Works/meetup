@@ -2,7 +2,7 @@ window._ = require('lodash')
 
 require('turbolinks').start()
 
-Turbolinks.setProgressBarDelay(10)
+Turbolinks.setProgressBarDelay(150)
 
 window.axios = require('axios')
 

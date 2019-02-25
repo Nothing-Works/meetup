@@ -2439,6 +2439,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     plan: {
@@ -22115,17 +22148,75 @@ var render = function() {
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "columns is-centered" }, [
         _c("div", { staticClass: "column is-half" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("header", { staticClass: "card-header" }, [
-              _c("p", { staticClass: "card-header-title" }, [
-                _vm._v(_vm._s(_vm.plan.title))
-              ])
+          _c("nav", { staticClass: "panel" }, [
+            _c("p", { staticClass: "panel-heading" }, [_vm._v("Plan details")]),
+            _vm._v(" "),
+            _c("a", { staticClass: "panel-block" }, [
+              _c("span", { staticClass: "panel-icon" }, [
+                _c("i", { staticClass: "fas fa-cloud" })
+              ]),
+              _vm._v(
+                "\n                        " +
+                  _vm._s(_vm.plan.title) +
+                  "\n                    "
+              )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-content" }, [
-              _c("div", { staticClass: "content" }, [
-                _vm._v(_vm._s(_vm.plan.cost))
-              ])
+            _c("a", { staticClass: "panel-block" }, [
+              _c("span", { staticClass: "panel-icon" }, [
+                _c("i", { staticClass: "fas fa-cloud" })
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
+              _vm._v(
+                "\n                        " +
+                  _vm._s(_vm.plan.cost) +
+                  " /month\n                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "panel-block" }, [
+              _c("span", { staticClass: "panel-icon" }, [
+                _c("i", { staticClass: "fas fa-cloud" })
+              ]),
+              _vm._v(
+                "\n                        " +
+                  _vm._s(_vm.plan.storage) +
+                  " GB Storage\n                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "panel-block" }, [
+              _c("span", { staticClass: "panel-icon" }, [
+                _c("i", { staticClass: "fas fa-cloud" })
+              ]),
+              _vm._v(
+                "\n                        " +
+                  _vm._s(_vm.plan.domains) +
+                  " Domains\n                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "panel-block" }, [
+              _c("span", { staticClass: "panel-icon" }, [
+                _c("i", { staticClass: "fas fa-cloud" })
+              ]),
+              _vm._v(
+                "\n                        " +
+                  _vm._s(_vm.plan.bandWidth) +
+                  " Bandwidth\n                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "panel-block" }, [
+              _c("span", { staticClass: "panel-icon" }, [
+                _c("i", { staticClass: "fas fa-cloud" })
+              ]),
+              _vm._v(
+                "\n                        " +
+                  _vm._s(_vm.plan.emails) +
+                  " Email Boxes\n                    "
+              )
             ])
           ]),
           _vm._v(" "),
@@ -34645,7 +34736,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 __webpack_require__(/*! turbolinks */ "./node_modules/turbolinks/dist/turbolinks.js").start();
 
-Turbolinks.setProgressBarDelay(10);
+Turbolinks.setProgressBarDelay(150);
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
@@ -35613,8 +35704,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/andysong/Projects/Laravel/meetup/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/andysong/Projects/Laravel/meetup/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Andy\Projects\laravel\meetup\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Andy\Projects\laravel\meetup\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
