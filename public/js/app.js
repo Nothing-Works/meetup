@@ -2016,7 +2016,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     logout: function logout() {
       axios.post('/logout').then(function () {
-        window.shared = null;
         Turbolinks.visit('/');
       });
     }

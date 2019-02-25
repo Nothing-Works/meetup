@@ -61,7 +61,6 @@ export default {
         },
         logout() {
             axios.post('/logout').then(() => {
-                window.shared = null
                 Turbolinks.visit('/')
             })
         }
