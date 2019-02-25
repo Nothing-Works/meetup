@@ -23,7 +23,7 @@
                 ></textarea>
             </div>
 
-            <footer class="card-footer">
+            <footer v-if="post.can.delete" class="card-footer">
                 <div class="card-footer-item">
                     <a class="button is-danger" @click="remove">Delete</a>
                 </div>

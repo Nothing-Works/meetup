@@ -20129,55 +20129,60 @@ var render = function() {
             })
       ]),
       _vm._v(" "),
-      _c("footer", { staticClass: "card-footer" }, [
-        _c("div", { staticClass: "card-footer-item" }, [
-          _c(
-            "a",
-            { staticClass: "button is-danger", on: { click: _vm.remove } },
-            [_vm._v("Delete")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-footer-item level" }, [
-          !_vm.editing
-            ? _c("div", { staticClass: "level-item" }, [
-                _c(
-                  "a",
-                  { staticClass: "button is-primary", on: { click: _vm.edit } },
-                  [_vm._v("Edit")]
-                )
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.editing
-            ? _c("div", { staticClass: "level-left" }, [
-                _c(
-                  "p",
-                  { staticClass: "level-item", on: { click: _vm.save } },
-                  [
-                    _c("a", { staticClass: "button is-success" }, [
-                      _vm._v("Save")
-                    ])
-                  ]
-                )
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.editing
-            ? _c("div", { staticClass: "level-right" }, [
-                _c(
-                  "p",
-                  { staticClass: "level-item", on: { click: _vm.cancel } },
-                  [
-                    _c("a", { staticClass: "button is-light" }, [
-                      _vm._v("Cancel")
-                    ])
-                  ]
-                )
-              ])
-            : _vm._e()
-        ])
-      ])
+      _vm.post.can.delete
+        ? _c("footer", { staticClass: "card-footer" }, [
+            _c("div", { staticClass: "card-footer-item" }, [
+              _c(
+                "a",
+                { staticClass: "button is-danger", on: { click: _vm.remove } },
+                [_vm._v("Delete")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-footer-item level" }, [
+              !_vm.editing
+                ? _c("div", { staticClass: "level-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "button is-primary",
+                        on: { click: _vm.edit }
+                      },
+                      [_vm._v("Edit")]
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.editing
+                ? _c("div", { staticClass: "level-left" }, [
+                    _c(
+                      "p",
+                      { staticClass: "level-item", on: { click: _vm.save } },
+                      [
+                        _c("a", { staticClass: "button is-success" }, [
+                          _vm._v("Save")
+                        ])
+                      ]
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.editing
+                ? _c("div", { staticClass: "level-right" }, [
+                    _c(
+                      "p",
+                      { staticClass: "level-item", on: { click: _vm.cancel } },
+                      [
+                        _c("a", { staticClass: "button is-light" }, [
+                          _vm._v("Cancel")
+                        ])
+                      ]
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ])
+        : _vm._e()
     ]),
     _vm._v(" "),
     _c("hr")

@@ -39,8 +39,7 @@ class User extends Authenticatable
 
     public function userInfo()
     {
-        return  Auth::check() ?
-        [
+        return [
             'auth' => [
                 'user' => [
                     'id' => Auth::user()->id,
@@ -48,6 +47,6 @@ class User extends Authenticatable
                     'email' => Auth::user()->email,
                 ],
             ],
-        ] : null;
+        ];
     }
 }
