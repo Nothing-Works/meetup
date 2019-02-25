@@ -1,11 +1,22 @@
 <template>
     <layout>
         <div class="container">
-            <div class="field">
+            <div class="field is-grouped">
                 <div class="control">
                     <a href="posts/create" class="button is-primary">New</a>
                 </div>
+                <p class="control">
+                    <input
+                        v-model="input"
+                        v-focus
+                        class="input"
+                        type="text"
+                        placeholder="Find a post"
+                        @keyup="search"
+                    />
+                </p>
             </div>
+
             <div class="columns">
                 <div class="column is-8">
                     <post-view
@@ -36,7 +47,8 @@ export default {
     },
     data() {
         return {
-            posts: this.items
+            posts: this.items,
+            input: ''
         }
     },
     computed: {
@@ -44,9 +56,17 @@ export default {
             return this.posts.length
         }
     },
+    mounted() {
+        let urlParams = new URLSearchParams(window.location.search)
+        let myParam = urlParams.get('search')
+        this.input = myParam
+    },
     methods: {
         remove(index) {
             this.posts.splice(index, 1)
+        },
+        search() {
+            Turbolinks.visit('/posts?search=' + this.input)
         }
     }
 }

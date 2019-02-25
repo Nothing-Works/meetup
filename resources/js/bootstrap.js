@@ -2,6 +2,8 @@ window._ = require('lodash')
 
 require('turbolinks').start()
 
+Turbolinks.setProgressBarDelay(10)
+
 window.axios = require('axios')
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'

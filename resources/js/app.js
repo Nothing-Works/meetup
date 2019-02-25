@@ -2,6 +2,11 @@ require('./bootstrap')
 import Vue from 'vue'
 import Shared from './mixins/shared'
 Vue.mixin(Shared)
+Vue.directive('focus', {
+    inserted: function(el) {
+        el.focus()
+    }
+})
 
 const files = require.context('./', true, /\.vue$/i)
 
