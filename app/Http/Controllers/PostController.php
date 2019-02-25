@@ -36,6 +36,6 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        dd(auth()->user()->can('delete', $post));
+        return View::component('ShowPost', compact('post'));
     }
 }

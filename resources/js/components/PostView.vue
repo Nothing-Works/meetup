@@ -2,7 +2,9 @@
     <div>
         <div class="card">
             <header class="card-header">
-                <p class="card-header-title">{{ item.title }}</p>
+                <p class="card-header-title">
+                    <a :href="link">{{ item.title }}</a>
+                </p>
 
                 <p class="card-header-icon" @click="favorite">
                     <span class="icon">
@@ -62,6 +64,11 @@ export default {
             item: { ...this.post },
             editing: false,
             favorited: false
+        }
+    },
+    computed: {
+        link() {
+            return `/posts/${this.item.id}`
         }
     },
     methods: {
