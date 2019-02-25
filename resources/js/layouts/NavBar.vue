@@ -16,6 +16,7 @@
             <div class="navbar-menu" :class="{ 'is-active': showBurger }">
                 <div class="navbar-start">
                     <a href="/posts" class="navbar-item">Posts</a>
+                    <a href="/plans" class="navbar-item">Plans</a>
                 </div>
                 <div class="navbar-end">
                     <div v-if="!shared" class="navbar-item">

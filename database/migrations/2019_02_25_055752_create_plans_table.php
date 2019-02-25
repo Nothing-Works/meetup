@@ -8,21 +8,23 @@ class CreatePlansTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->integer('cost');
+            $table->integer('storage');
+            $table->integer('domains');
+            $table->integer('bandWidth');
+            $table->integer('emails');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

@@ -2011,6 +2011,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2307,6 +2308,101 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/PlansView.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/plans/PlansView.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -21256,6 +21352,10 @@ var staticRenderFns = [
     return _c("div", { staticClass: "navbar-start" }, [
       _c("a", { staticClass: "navbar-item", attrs: { href: "/posts" } }, [
         _vm._v("Posts")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "navbar-item", attrs: { href: "/plans" } }, [
+        _vm._v("Plans")
       ])
     ])
   },
@@ -21802,6 +21902,157 @@ var render = function() {
                   ])
                 ]
               )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/PlansView.vue?vue&type=template&id=9dd7d95e&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/plans/PlansView.vue?vue&type=template&id=9dd7d95e& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("layout", [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "pricing-table" }, [
+        _c("div", { staticClass: "pricing-plan" }, [
+          _c("div", { staticClass: "plan-header" }, [_vm._v("Starter")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-price" }, [
+            _c("span", { staticClass: "plan-price-amount" }, [
+              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
+              _vm._v("20 ")
+            ]),
+            _vm._v("/month\n                ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-items" }, [
+            _c("div", { staticClass: "plan-item" }, [_vm._v("20GB Storage")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("100 Domains")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("-")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("-")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-footer" }, [
+            _c(
+              "button",
+              {
+                staticClass: "button is-fullwidth",
+                attrs: { disabled: "disabled" }
+              },
+              [
+                _vm._v(
+                  "\n                        Current plan\n                    "
+                )
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "pricing-plan is-warning" }, [
+          _c("div", { staticClass: "plan-header" }, [_vm._v("Startups")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-price" }, [
+            _c("span", { staticClass: "plan-price-amount" }, [
+              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
+              _vm._v("40 ")
+            ]),
+            _vm._v("/month\n                ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-items" }, [
+            _c("div", { staticClass: "plan-item" }, [_vm._v("20GB Storage")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("25 Domains")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("1TB Bandwidth")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("-")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-footer" }, [
+            _c("button", { staticClass: "button is-fullwidth" }, [
+              _vm._v("Choose")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "pricing-plan is-active" }, [
+          _c("div", { staticClass: "plan-header" }, [_vm._v("Growing Team")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-price" }, [
+            _c("span", { staticClass: "plan-price-amount" }, [
+              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
+              _vm._v("60 ")
+            ]),
+            _vm._v("/month\n                ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-items" }, [
+            _c("div", { staticClass: "plan-item" }, [_vm._v("200GB Storage")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("50 Domains")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("1TB Bandwidth")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("100 Email Boxes")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-footer" }, [
+            _c("button", { staticClass: "button is-fullwidth" }, [
+              _vm._v("Choose")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "pricing-plan is-danger" }, [
+          _c("div", { staticClass: "plan-header" }, [_vm._v("Enterprise")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-price" }, [
+            _c("span", { staticClass: "plan-price-amount" }, [
+              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
+              _vm._v("100 ")
+            ]),
+            _vm._v("/month\n                ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-items" }, [
+            _c("div", { staticClass: "plan-item" }, [_vm._v("2TB Storage")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("100 Domains")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [_vm._v("1TB Bandwidth")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "plan-item" }, [
+              _vm._v("1000 Email Boxes")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "plan-footer" }, [
+            _c("button", { staticClass: "button is-fullwidth" }, [
+              _vm._v("Choose")
             ])
           ])
         ])
@@ -34198,6 +34449,7 @@ var map = {
 	"./pages/Welcome.vue": "./resources/js/pages/Welcome.vue",
 	"./pages/auth/Login.vue": "./resources/js/pages/auth/Login.vue",
 	"./pages/auth/Register.vue": "./resources/js/pages/auth/Register.vue",
+	"./pages/plans/PlansView.vue": "./resources/js/pages/plans/PlansView.vue",
 	"./pages/posts/PostCreate.vue": "./resources/js/pages/posts/PostCreate.vue",
 	"./pages/posts/PostsView.vue": "./resources/js/pages/posts/PostsView.vue",
 	"./pages/posts/ShowPost.vue": "./resources/js/pages/posts/ShowPost.vue"
@@ -34823,6 +35075,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/plans/PlansView.vue":
+/*!************************************************!*\
+  !*** ./resources/js/pages/plans/PlansView.vue ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PlansView.vue?vue&type=template&id=9dd7d95e& */ "./resources/js/pages/plans/PlansView.vue?vue&type=template&id=9dd7d95e&");
+/* harmony import */ var _PlansView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PlansView.vue?vue&type=script&lang=js& */ "./resources/js/pages/plans/PlansView.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PlansView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/plans/PlansView.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/plans/PlansView.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/pages/plans/PlansView.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PlansView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PlansView.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/PlansView.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PlansView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/plans/PlansView.vue?vue&type=template&id=9dd7d95e&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/pages/plans/PlansView.vue?vue&type=template&id=9dd7d95e& ***!
+  \*******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./PlansView.vue?vue&type=template&id=9dd7d95e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/PlansView.vue?vue&type=template&id=9dd7d95e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
