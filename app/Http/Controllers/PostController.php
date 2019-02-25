@@ -22,9 +22,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $input = request('search');
-
-        $items = Post::latest()->where('title', 'LIKE', '%'.$input.'%')->get();
+        $items = Post::latest()->where('title', 'LIKE', '%'.request('search').'%')->get();
 
         return View::component('PostsView', compact('items'));
     }
