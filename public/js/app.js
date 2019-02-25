@@ -2631,7 +2631,11 @@ __webpack_require__.r(__webpack_exports__);
       this.posts.splice(index, 1);
     },
     search: function search() {
-      Turbolinks.visit('/posts?search=' + this.input);
+      if (this.input == '' || this.input == null) {
+        Turbolinks.visit('/posts');
+      } else {
+        Turbolinks.visit('/posts?search=' + this.input);
+      }
     }
   }
 });

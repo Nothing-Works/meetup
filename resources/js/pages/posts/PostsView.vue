@@ -66,7 +66,11 @@ export default {
             this.posts.splice(index, 1)
         },
         search() {
-            Turbolinks.visit('/posts?search=' + this.input)
+            if (this.input == '' || this.input == null) {
+                Turbolinks.visit('/posts')
+            } else {
+                Turbolinks.visit('/posts?search=' + this.input)
+            }
         }
     }
 }
