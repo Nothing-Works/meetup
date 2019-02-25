@@ -1905,7 +1905,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: {
     remove: function remove() {
-      this.$emit('remove');
+      var _this = this;
+
+      axios.delete('/posts/' + this.item.id).then(function () {
+        _this.$emit('remove');
+      });
     },
     edit: function edit() {
       this.editing = true;

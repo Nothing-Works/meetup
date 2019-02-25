@@ -73,7 +73,9 @@ export default {
     },
     methods: {
         remove() {
-            this.$emit('remove')
+            axios.delete('/posts/' + this.item.id).then(() => {
+                this.$emit('remove')
+            })
         },
         edit() {
             this.editing = true

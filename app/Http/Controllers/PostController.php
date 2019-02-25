@@ -53,4 +53,9 @@ class PostController extends Controller
 
         Post::create($attributes + ['user_id' => auth()->id()]);
     }
+
+    public function destroy(Post $post)
+    {
+        $post->delete();
+    }
 }
