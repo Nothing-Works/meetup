@@ -1930,6 +1930,84 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PricingPlan.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PricingPlan.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    item: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    colors: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    }
+  },
+  data: function data() {
+    return {
+      plan: _objectSpread({}, this.item),
+      active: false
+    };
+  },
+  computed: {
+    classes: function classes() {
+      var _ref;
+
+      return _ref = {
+        'pricing-plan': true
+      }, _defineProperty(_ref, this.colors[this.plan.id - 1], true), _defineProperty(_ref, 'is-active', this.active), _ref;
+    }
+  },
+  methods: {
+    mouseIn: function mouseIn() {
+      this.active = true;
+    },
+    mouseOut: function mouseOut() {
+      this.active = false;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/Layout.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/Layout.vue?vue&type=script&lang=js& ***!
@@ -2335,6 +2413,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    items: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    }
+  },
+  data: function data() {
+    return {
+      plans: this.items,
+      colors: ['is-warning', 'is-danger', 'is-primary', 'is-success']
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/ShowPlan.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/plans/ShowPlan.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -2359,50 +2465,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    plan: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -21239,6 +21311,78 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      class: _vm.classes,
+      on: { mouseover: _vm.mouseIn, mouseleave: _vm.mouseOut }
+    },
+    [
+      _c("div", { staticClass: "plan-header" }, [
+        _vm._v(_vm._s(_vm.plan.title))
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "plan-price" }, [
+        _c("span", { staticClass: "plan-price-amount" }, [
+          _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
+          _vm._v("\n            " + _vm._s(_vm.plan.cost) + " ")
+        ]),
+        _vm._v("/month\n    ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "plan-items" }, [
+        _c("div", { staticClass: "plan-item" }, [
+          _vm._v(_vm._s(_vm.plan.storage) + " GB Storage")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "plan-item" }, [
+          _vm._v(_vm._s(_vm.plan.domains) + " Domains")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "plan-item" }, [
+          _vm._v(_vm._s(_vm.plan.bandWidth) + " Bandwidth")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "plan-item" }, [
+          _vm._v(_vm._s(_vm.plan.emails) + " Email Boxes")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "plan-footer" }, [
+        _c(
+          "a",
+          {
+            staticClass: "button is-fullwidth",
+            attrs: { href: "/plans/" + _vm.plan.id }
+          },
+          [_vm._v("More details")]
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layouts/Layout.vue?vue&type=template&id=41da8f8e&":
 /*!******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layouts/Layout.vue?vue&type=template&id=41da8f8e& ***!
@@ -21933,126 +22077,67 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("layout", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "pricing-table" }, [
-        _c("div", { staticClass: "pricing-plan" }, [
-          _c("div", { staticClass: "plan-header" }, [_vm._v("Starter")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-price" }, [
-            _c("span", { staticClass: "plan-price-amount" }, [
-              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
-              _vm._v("20 ")
+      _c(
+        "div",
+        { staticClass: "pricing-table" },
+        _vm._l(_vm.plans, function(plan) {
+          return _c("pricing-plan", {
+            key: plan.id,
+            attrs: { item: plan, colors: _vm.colors }
+          })
+        }),
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/ShowPlan.vue?vue&type=template&id=6c8dfe14&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/plans/ShowPlan.vue?vue&type=template&id=6c8dfe14& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("layout", [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "columns is-centered" }, [
+        _c("div", { staticClass: "column is-half" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("header", { staticClass: "card-header" }, [
+              _c("p", { staticClass: "card-header-title" }, [
+                _vm._v(_vm._s(_vm.plan.title))
+              ])
             ]),
-            _vm._v("/month\n                ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-items" }, [
-            _c("div", { staticClass: "plan-item" }, [_vm._v("20GB Storage")]),
             _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("100 Domains")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("-")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("-")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-footer" }, [
-            _c(
-              "button",
-              {
-                staticClass: "button is-fullwidth",
-                attrs: { disabled: "disabled" }
-              },
-              [
-                _vm._v(
-                  "\n                        Current plan\n                    "
-                )
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "pricing-plan is-warning" }, [
-          _c("div", { staticClass: "plan-header" }, [_vm._v("Startups")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-price" }, [
-            _c("span", { staticClass: "plan-price-amount" }, [
-              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
-              _vm._v("40 ")
-            ]),
-            _vm._v("/month\n                ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-items" }, [
-            _c("div", { staticClass: "plan-item" }, [_vm._v("20GB Storage")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("25 Domains")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("1TB Bandwidth")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("-")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-footer" }, [
-            _c("button", { staticClass: "button is-fullwidth" }, [
-              _vm._v("Choose")
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "pricing-plan is-active" }, [
-          _c("div", { staticClass: "plan-header" }, [_vm._v("Growing Team")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-price" }, [
-            _c("span", { staticClass: "plan-price-amount" }, [
-              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
-              _vm._v("60 ")
-            ]),
-            _vm._v("/month\n                ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-items" }, [
-            _c("div", { staticClass: "plan-item" }, [_vm._v("200GB Storage")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("50 Domains")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("1TB Bandwidth")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("100 Email Boxes")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-footer" }, [
-            _c("button", { staticClass: "button is-fullwidth" }, [
-              _vm._v("Choose")
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "pricing-plan is-danger" }, [
-          _c("div", { staticClass: "plan-header" }, [_vm._v("Enterprise")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-price" }, [
-            _c("span", { staticClass: "plan-price-amount" }, [
-              _c("span", { staticClass: "plan-price-currency" }, [_vm._v("$")]),
-              _vm._v("100 ")
-            ]),
-            _vm._v("/month\n                ")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "plan-items" }, [
-            _c("div", { staticClass: "plan-item" }, [_vm._v("2TB Storage")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("100 Domains")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [_vm._v("1TB Bandwidth")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "plan-item" }, [
-              _vm._v("1000 Email Boxes")
+            _c("div", { staticClass: "card-content" }, [
+              _c("div", { staticClass: "content" }, [
+                _vm._v(_vm._s(_vm.plan.cost))
+              ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "plan-footer" }, [
-            _c("button", { staticClass: "button is-fullwidth" }, [
-              _vm._v("Choose")
+          _c("div", { staticClass: "field has-margin-top-15" }, [
+            _c("div", { staticClass: "control" }, [
+              _c(
+                "a",
+                { staticClass: "button is-link", attrs: { href: "/plans" } },
+                [_vm._v("Back")]
+              )
             ])
           ])
         ])
@@ -34443,6 +34528,7 @@ module.exports = function(module) {
 var map = {
 	"./components/MetaData.vue": "./resources/js/components/MetaData.vue",
 	"./components/PostView.vue": "./resources/js/components/PostView.vue",
+	"./components/PricingPlan.vue": "./resources/js/components/PricingPlan.vue",
 	"./layouts/Layout.vue": "./resources/js/layouts/Layout.vue",
 	"./layouts/NavBar.vue": "./resources/js/layouts/NavBar.vue",
 	"./pages/Home.vue": "./resources/js/pages/Home.vue",
@@ -34450,6 +34536,7 @@ var map = {
 	"./pages/auth/Login.vue": "./resources/js/pages/auth/Login.vue",
 	"./pages/auth/Register.vue": "./resources/js/pages/auth/Register.vue",
 	"./pages/plans/PlansView.vue": "./resources/js/pages/plans/PlansView.vue",
+	"./pages/plans/ShowPlan.vue": "./resources/js/pages/plans/ShowPlan.vue",
 	"./pages/posts/PostCreate.vue": "./resources/js/pages/posts/PostCreate.vue",
 	"./pages/posts/PostsView.vue": "./resources/js/pages/posts/PostsView.vue",
 	"./pages/posts/ShowPost.vue": "./resources/js/pages/posts/ShowPost.vue"
@@ -34674,6 +34761,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PostView_vue_vue_type_template_id_3e32d250___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PostView_vue_vue_type_template_id_3e32d250___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PricingPlan.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/PricingPlan.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PricingPlan.vue?vue&type=template&id=7e24b118& */ "./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&");
+/* harmony import */ var _PricingPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PricingPlan.vue?vue&type=script&lang=js& */ "./resources/js/components/PricingPlan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PricingPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PricingPlan.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/PricingPlan.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/PricingPlan.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./PricingPlan.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PricingPlan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./PricingPlan.vue?vue&type=template&id=7e24b118& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PricingPlan.vue?vue&type=template&id=7e24b118&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PricingPlan_vue_vue_type_template_id_7e24b118___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -35144,6 +35300,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PlansView_vue_vue_type_template_id_9dd7d95e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/plans/ShowPlan.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/pages/plans/ShowPlan.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ShowPlan_vue_vue_type_template_id_6c8dfe14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ShowPlan.vue?vue&type=template&id=6c8dfe14& */ "./resources/js/pages/plans/ShowPlan.vue?vue&type=template&id=6c8dfe14&");
+/* harmony import */ var _ShowPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ShowPlan.vue?vue&type=script&lang=js& */ "./resources/js/pages/plans/ShowPlan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ShowPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ShowPlan_vue_vue_type_template_id_6c8dfe14___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ShowPlan_vue_vue_type_template_id_6c8dfe14___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/plans/ShowPlan.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/plans/ShowPlan.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/pages/plans/ShowPlan.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ShowPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ShowPlan.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/ShowPlan.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ShowPlan_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/plans/ShowPlan.vue?vue&type=template&id=6c8dfe14&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/pages/plans/ShowPlan.vue?vue&type=template&id=6c8dfe14& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShowPlan_vue_vue_type_template_id_6c8dfe14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ShowPlan.vue?vue&type=template&id=6c8dfe14& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/plans/ShowPlan.vue?vue&type=template&id=6c8dfe14&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShowPlan_vue_vue_type_template_id_6c8dfe14___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShowPlan_vue_vue_type_template_id_6c8dfe14___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
