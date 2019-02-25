@@ -5,16 +5,14 @@
                 <div class="column is-half">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Create Posts</p>
+                            <p class="card-header-title">Create Post</p>
                         </header>
-
                         <div class="card-content">
                             <form @submit.prevent="submit">
                                 <div class="field">
                                     <label for="title" class="label"
                                         >Title</label
                                     >
-
                                     <div class="control">
                                         <input
                                             v-model="form.title"
