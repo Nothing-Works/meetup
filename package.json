@@ -30,5 +30,8 @@
         "turbolinks": "^5.2.0",
         "vue": "^2.6.7",
         "vue-template-compiler": "^2.6.7"
+    },
+    "dependencies": {
+        "vue-email-editor": "^0.1.0"
     }
 }

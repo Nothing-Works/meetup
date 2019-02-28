@@ -17,6 +17,7 @@
                 <div class="navbar-start">
                     <a href="/posts" class="navbar-item">Posts</a>
                     <a href="/plans" class="navbar-item">Plans</a>
+                    <a href="/emails" class="navbar-item">Email</a>
                 </div>
                 <div class="navbar-end">
                     <div v-if="!shared" class="navbar-item">

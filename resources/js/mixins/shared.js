@@ -1,7 +1,8 @@
 export default {
     data() {
         return {
-            shared: window.shared
+            shared: window.shared,
+            unlayer: window.editor
         }
     }
 }
