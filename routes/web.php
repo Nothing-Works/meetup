@@ -26,7 +26,7 @@ Route::post('/send', function () {
     $email->addContent(
     'text/html', request()->input('email')
 );
-    $sendgrid = new \SendGrid('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');
+    // $sendgrid = new \SendGrid('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');
     try {
         $response = $sendgrid->send($email);
         dd($response);
