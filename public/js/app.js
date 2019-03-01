@@ -2383,6 +2383,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2398,9 +2399,7 @@ __webpack_require__.r(__webpack_exports__);
     });
     unlayer.init({
       id: 'editor',
-      projectId: 2215,
-      displayMode: 'email',
-      templateId: '6011'
+      displayMode: 'email'
     });
   },
   methods: {
@@ -2415,6 +2414,16 @@ __webpack_require__.r(__webpack_exports__);
     },
     load: function load() {
       unlayer.loadDesign(JSON.parse(this.email));
+    },
+    send: function send() {
+      unlayer.exportHtml(function (data) {
+        var email = data.html;
+        axios.post('/send', {
+          email: email
+        }).catch(function (error) {
+          console.log(error);
+        });
+      });
     }
   }
 });
@@ -22832,6 +22841,15 @@ var render = function() {
         on: { click: _vm.load }
       },
       [_vm._v("load")]
+    ),
+    _vm._v(" "),
+    _c(
+      "a",
+      {
+        staticClass: "button is-primary has-margin-top-10",
+        on: { click: _vm.send }
+      },
+      [_vm._v("send")]
     )
   ])
 }

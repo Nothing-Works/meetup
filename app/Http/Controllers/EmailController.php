@@ -37,7 +37,9 @@ class EmailController extends Controller
 
     public function show(Email $email)
     {
-        return $email;
+        $item = Email::latest()->first();
+
+        return $item;
     }
 
     /**

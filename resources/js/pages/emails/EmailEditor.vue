@@ -5,6 +5,7 @@
         </div>
         <a class="button is-primary has-margin-top-10" @click="save">save</a>
         <a class="button is-primary has-margin-top-10" @click="load">load</a>
+        <a class="button is-primary has-margin-top-10" @click="send">send</a>
     </layout>
 </template>
 
@@ -20,9 +21,7 @@ export default {
 
         unlayer.init({
             id: 'editor',
-            projectId: 2215,
-            displayMode: 'email',
-            templateId: '6011'
+            displayMode: 'email'
         })
     },
     methods: {
@@ -37,6 +36,14 @@ export default {
         },
         load() {
             unlayer.loadDesign(JSON.parse(this.email))
+        },
+        send() {
+            unlayer.exportHtml(function(data) {
+                const email = data.html
+                axios.post('/send', { email }).catch(error => {
+                    console.log(error)
+                })
+            })
         }
     }
 }
