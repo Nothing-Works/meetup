@@ -37,16 +37,12 @@ Route::post('/send', function () {
         echo 'Caught exception: '.$e->getMessage()."\n";
     }
 });
-
 Route::get('/', function () {
     return View::component('Welcome');
 });
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts', 'PostController@index');
-
 Route::get('/emails', 'EmailController@index');
 Route::get('/plans', 'PlanController@index');
 Route::get('/plans/{plan}', 'PlanController@show');
