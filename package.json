@@ -28,10 +28,7 @@
         "sass": "^1.17.2",
         "sass-loader": "^7.1.0",
         "turbolinks": "^5.2.0",
-        "vue": "^2.6.7",
-        "vue-template-compiler": "^2.6.7"
-    },
-    "dependencies": {
-        "vue-email-editor": "^0.1.0"
+        "vue": "^2.6.8",
+        "vue-template-compiler": "^2.6.8"
     }
 }
