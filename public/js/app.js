@@ -2381,13 +2381,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      email: ''
+    };
+  },
   mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/emails/3').then(function (_ref) {
+      var data = _ref.data;
+      return _this.email = data.email;
+    });
     unlayer.init({
       id: 'editor',
       projectId: 2215,
+      displayMode: 'email',
       templateId: '6011'
     });
+  },
+  methods: {
+    save: function save() {
+      unlayer.saveDesign(function (email) {
+        axios.post('/emails', {
+          email: JSON.stringify(email)
+        }).catch(function (error) {
+          console.log(error);
+        });
+      });
+    },
+    load: function load() {
+      unlayer.loadDesign(JSON.parse(this.email));
+    }
   }
 });
 
@@ -22786,7 +22814,25 @@ var render = function() {
   return _c("layout", [
     _c("div", { staticClass: "wrapper" }, [
       _c("div", { attrs: { id: "editor" } })
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "a",
+      {
+        staticClass: "button is-primary has-margin-top-10",
+        on: { click: _vm.save }
+      },
+      [_vm._v("save")]
+    ),
+    _vm._v(" "),
+    _c(
+      "a",
+      {
+        staticClass: "button is-primary has-margin-top-10",
+        on: { click: _vm.load }
+      },
+      [_vm._v("load")]
+    )
   ])
 }
 var staticRenderFns = []

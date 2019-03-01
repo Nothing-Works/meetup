@@ -27,26 +27,17 @@ class EmailController extends Controller
     {
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store()
     {
+        $attributes = request()->validate([
+            'email' => 'required',
+        ]);
+        Email::create($attributes);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Email $email
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function show(Email $email)
     {
+        return $email;
     }
 
     /**
