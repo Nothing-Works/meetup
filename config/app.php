@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'sendGrid' => env('SEND_GRID', false),
     /*
     |--------------------------------------------------------------------------
     | Application Name

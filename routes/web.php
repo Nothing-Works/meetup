@@ -12,21 +12,20 @@ use Illuminate\Support\Facades\View;
 | contains the "web" middleware group. Now create something great!
 |
 */
-require '../vendor/autoload.php';
 
 Route::post('/send', function () {
     $email = new \SendGrid\Mail\Mail();
     $email->setFrom('test@example.com', 'Example User');
     $email->setSubject('Sending with SendGrid is NOT Fun');
-    // $email->addTo('andylauszp@gmail.com', 'Andy');
-    $email->addTo('Andy@infosoft.co.nz', 'Andy');
+    $email->addTo('andylauszp@gmail.com', 'Andy');
+    // $email->addTo('Andy@infosoft.co.nz', 'Andy');
     // $email->addTo('Sam@infosoft.co.nz', 'Sam');
     // $email->addTo('paul@infosoft.co.nz', 'Paul');
     // $email->addTo('Alastair@infosoft.co.nz', 'Alastair');
     $email->addContent(
     'text/html', request()->input('email')
 );
-    // $sendgrid = new \SendGrid('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');
+    $sendgrid = new \SendGrid(config('app.sendGrid', false));
     try {
         $response = $sendgrid->send($email);
         dd($response);
