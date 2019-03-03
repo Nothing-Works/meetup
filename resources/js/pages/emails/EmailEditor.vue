@@ -13,11 +13,11 @@
 export default {
     data() {
         return {
-            email: ''
+            json: ''
         }
     },
     mounted() {
-        axios.get('/emails/3').then(({ data }) => (this.email = data.email))
+        axios.get('/emails/1').then(({ data }) => (this.json = data.json))
 
         unlayer.init({
             id: 'editor',
@@ -26,24 +26,29 @@ export default {
     },
     methods: {
         save() {
-            unlayer.saveDesign(function(email) {
+            unlayer.exportHtml(function({ design, html }) {
                 axios
-                    .post('/emails', { email: JSON.stringify(email) })
+                    .post('/emails', {
+                        json: JSON.stringify(design),
+                        html: html
+                    })
                     .catch(error => {
                         console.log(error)
                     })
             })
         },
         load() {
-            unlayer.loadDesign(JSON.parse(this.email))
+            unlayer.loadDesign(JSON.parse(this.json))
         },
         send() {
-            unlayer.exportHtml(function(data) {
-                const email = data.html
-                axios.post('/send', { email }).catch(error => {
+            axios
+                .post('/send')
+                .then(data => {
+                    console.log(data)
+                })
+                .catch(error => {
                     console.log(error)
                 })
-            })
         }
     }
 }

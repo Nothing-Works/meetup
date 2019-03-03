@@ -30,7 +30,8 @@ class EmailController extends Controller
     public function store()
     {
         $attributes = request()->validate([
-            'email' => 'required',
+            'json' => 'required',
+            'html' => 'required',
         ]);
         Email::create($attributes);
     }

@@ -13,7 +13,8 @@ class CreateEmailsTable extends Migration
     {
         Schema::create('emails', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('email');
+            $table->text('json');
+            $table->text('html');
             $table->timestamps();
         });
     }
