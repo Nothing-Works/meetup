@@ -32,6 +32,10 @@ export default {
             id: 'editor',
             displayMode: 'email'
         })
+        unlayer.setMergeTags([
+            { name: 'First Name', value: '{{first_name}}' },
+            { name: 'Last Name', value: '{{last_name}}' }
+        ])
     },
     methods: {
         save() {

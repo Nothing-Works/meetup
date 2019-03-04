@@ -2411,6 +2411,13 @@ __webpack_require__.r(__webpack_exports__);
       id: 'editor',
       displayMode: 'email'
     });
+    unlayer.setMergeTags([{
+      name: 'First Name',
+      value: '{{first_name}}'
+    }, {
+      name: 'Last Name',
+      value: '{{last_name}}'
+    }]);
   },
   methods: {
     save: function save() {
