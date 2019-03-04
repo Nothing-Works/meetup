@@ -18,6 +18,11 @@ class EmailController extends Controller
         return View::component('EmailEditor');
     }
 
+    public function all()
+    {
+        return Email::all()->pluck('id');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -38,9 +43,7 @@ class EmailController extends Controller
 
     public function show(Email $email)
     {
-        $item = Email::latest()->first();
-
-        return $item;
+        return $email;
     }
 
     /**

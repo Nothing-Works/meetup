@@ -3,6 +3,14 @@
         <div class="wrapper">
             <div id="editor"></div>
         </div>
+
+        <div class="select">
+            <select v-model="selectedId">
+                <option v-for="id in ids" :key="id" :value="id">{{
+                    id
+                }}</option>
+            </select>
+        </div>
         <a class="button is-primary has-margin-top-10" @click="save">save</a>
         <a class="button is-primary has-margin-top-10" @click="load">load</a>
         <a class="button is-primary has-margin-top-10" @click="send">send</a>
@@ -13,12 +21,13 @@
 export default {
     data() {
         return {
-            json: ''
+            json: '',
+            ids: [],
+            selectedId: ''
         }
     },
     mounted() {
-        axios.get('/emails/1').then(({ data }) => (this.json = data.json))
-
+        axios.get('/emails/all').then(({ data }) => (this.ids = data))
         unlayer.init({
             id: 'editor',
             displayMode: 'email'
@@ -38,7 +47,10 @@ export default {
             })
         },
         load() {
-            unlayer.loadDesign(JSON.parse(this.json))
+            axios.get('/emails/' + this.selectedId).then(({ data }) => {
+                this.json = data.json
+                unlayer.loadDesign(JSON.parse(this.json))
+            })
         },
         send() {
             axios

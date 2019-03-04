@@ -2384,18 +2384,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      json: ''
+      json: '',
+      ids: [],
+      selectedId: ''
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/emails/1').then(function (_ref) {
+    axios.get('/emails/all').then(function (_ref) {
       var data = _ref.data;
-      return _this.json = data.json;
+      return _this.ids = data;
     });
     unlayer.init({
       id: 'editor',
@@ -2416,7 +2426,13 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     load: function load() {
-      unlayer.loadDesign(JSON.parse(this.json));
+      var _this2 = this;
+
+      axios.get('/emails/' + this.selectedId).then(function (_ref3) {
+        var data = _ref3.data;
+        _this2.json = data.json;
+        unlayer.loadDesign(JSON.parse(_this2.json));
+      });
     },
     send: function send() {
       axios.post('/send').then(function (data) {
@@ -22823,6 +22839,43 @@ var render = function() {
   return _c("layout", [
     _c("div", { staticClass: "wrapper" }, [
       _c("div", { attrs: { id: "editor" } })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "select" }, [
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedId,
+              expression: "selectedId"
+            }
+          ],
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.selectedId = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        _vm._l(_vm.ids, function(id) {
+          return _c("option", { key: id, domProps: { value: id } }, [
+            _vm._v(_vm._s(id))
+          ])
+        }),
+        0
+      )
     ]),
     _vm._v(" "),
     _c(

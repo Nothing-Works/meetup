@@ -13,6 +13,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts', 'PostController@index');
 Route::get('/emails', 'EmailController@index');
+Route::get('/emails/all', 'EmailController@all');
 Route::get('/plans', 'PlanController@index');
 Route::get('/plans/{plan}', 'PlanController@show');
 Route::get('/emails/{email}', 'EmailController@show');
